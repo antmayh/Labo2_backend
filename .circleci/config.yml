@@ -6,10 +6,8 @@ jobs:
     executor: node/default
     steps:
       - run: git clone https://github.com/antmayh/Labo2_backend.git
-      - run: sudo npm install -g npm@latest
-      - node/install-packages:
-          cache-path: ~/Labo2_backend
-          override-ci-command: npm install
+      - run: cd Labo2_backend
+      - run: sudo npm install
       - run: npm run test
 workflows:
   build:
