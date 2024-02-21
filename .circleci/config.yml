@@ -6,7 +6,6 @@ jobs:
     executor: node/default
     steps:
       - run: git clone https://github.com/antmayh/Labo2_backend.git /home/circleci/project
-      - run: cd Labo2_backend
       - run: sudo npm install
       - run: npm run test
 workflows:
