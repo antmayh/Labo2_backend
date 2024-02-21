@@ -7,7 +7,10 @@ jobs:
     steps:
       - run: git clone https://github.com/antmayh/Labo2_backend.git
       - run: cd Labo2_backend
-      - run: sudo npm install
+      - run: sudo npm install -g npm@latest
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: npm install
       - run: npm run test
 workflows:
   build:
