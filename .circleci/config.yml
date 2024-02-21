@@ -14,7 +14,7 @@ jobs:
       - run: git clone https://github.com/antmayh/Labo2_backend.git
       - run: git clone https://github.com/antmayh/Labo2_frontend.git
       - run: cd Labo2_frontend && npm install
-      - run: cd Labo2_frontend && npm build
+      - run: cd Labo2_frontend && npm run build
       - run: mkdir Labo2_backend/public
       - run: cp -rT Labo2_frontend/build Labo2_backend/public
       - persist_to_workspace:
